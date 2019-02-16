@@ -20,8 +20,6 @@ return [
             $params['type']; // Element definition (YOOtheme\Builder\ElementType)
             $params['app']; // Application instance (YOOtheme\Application)
 
-            
-
         },
 
     ],

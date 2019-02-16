@@ -45,7 +45,12 @@
             "label": "Container Classes",
             "description": "Add classes",
             "type": "text"
-        }
+        },
+        "name": "${builder:name}",
+        "status": "${builder:status}",
+        "id": "${builder:id}",
+        "class": "${builder:cls}",
+        "animation": "${builder:animation}"
     },
     "fieldset": {
         "default": {

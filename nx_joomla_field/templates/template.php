@@ -1,7 +1,6 @@
 <?php
 
 
-
 $model = JModelLegacy::getInstance('Article', 'ContentModel', array('ignore_request'=>true));
 $articleID = JFactory::getApplication()->input->get('id');
 $appParams = JFactory::getApplication()->getParams();
@@ -13,8 +12,8 @@ switch($props['source']){
     default:
     $string = $article->title;
 };
-
-echo '<'.$props['container'].' class="'.$props['containerclasses'].'">'.$string.'</'.$props['container']."> \n";
+var_dump($props);
+echo '<'.$props['container'].' class="'.$props['class'].'">'.$string.'</'.$props['container']."> \n";
 
 ?>
 
