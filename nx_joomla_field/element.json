@@ -1,0 +1,66 @@
+{
+    "@import": "./element.php",
+    "name": "nx_joomla_field",
+    "title": "J! Field",
+    "icon": "${url:images/icon.svg}",
+    "iconSmall": "${url:images/iconSmall.svg}",
+    "element": true,
+    "container": false,
+    "width": 500,
+    "defaults": {
+        "source": "title",
+        "container": "h1"
+    },
+    "templates": {
+        "render": "./templates/template.php",
+        "content": "./templates/content.php"
+    },
+    "fields": {
+
+        "source": {
+            "label": "Select Source",
+            "description": "Select the Source",
+            "type": "select",
+            "options": {
+                "Article Title": "title"
+            }
+        },
+        "container": {
+            "label": "Container",
+            "description": "Select the Container Element",
+            "type": "select",
+            "options": {
+                "h1": "h1",
+                "h2": "h2",
+                "h3": "h3",
+                "h4": "h4",
+                "h5": "h5",
+                "h6": "h6",
+                "div": "div",
+                "Paragraph": "p",
+                "Span": "span"
+            }
+        },
+        "containerclasses":{
+            "label": "Container Classes",
+            "description": "Add classes",
+            "type": "text"
+        }
+    },
+    "fieldset": {
+        "default": {
+            "type": "tabs",
+            "fields": [
+                {
+                    "title": "Element",
+                    "fields": [
+                        "source",
+                        "container",
+                        "containerclasses"
+                    ]
+                },
+                "${builder:advanced}"
+            ]
+        }
+    }
+}
